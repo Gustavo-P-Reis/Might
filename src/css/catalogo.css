@@ -140,14 +140,18 @@ body {
 }
 
 .dropdown-toggle {
-    background-color: transparent;
-    color:  #4a4d50;
-    border: 1px solid  #007bff;
-    padding: 2px 10px;
+    display: inline-block;
+    width: 200px; /* Define a largura fixa */
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-    text-align: center;
+    text-align: left;
+    white-space: nowrap; /* Impede quebra de linha no texto */
+}
+
+.dropdown-toggle {
+    min-width: 200px; /* Define uma largura mínima */
 }
 
 .dropdown-menu {
@@ -155,10 +159,10 @@ body {
     position: absolute;
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 4px !;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    min-width: 160px;
+    min-width: 160px !important;
 }
 
 .dropdown-menu li {
@@ -176,8 +180,388 @@ body {
     background-color: #f1f1f1;
 }
 
-.dropdown-toggle:hover {
-    background-color: #f1f1f1; 
-    color: #0056b3; /* Muda a cor do texto ao passar o mouse */
+/* Estilização do catálogo */
+/* Geral para o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: white;
+}
+
+.cabecalho .header-logo img {
+    margin-right: 10px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons .search-input {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.header-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Título centralizado */
+.centered-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Dropdown de filtro */
+/* Estilo para alinhar o texto "Listar por:" e o dropdown */
+/* Alinhar o filtro à direita */
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha à direita */
+    margin-bottom: 20px;
+    margin-right: 30px; /* Ajusta a distância da borda direita */
+}
+
+/* Estilos para o span e o dropdown */
+.filter-container span {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    list-style-type: none;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    margin-top: 10px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Ajustes gerais do catálogo */
+.catalogo-jogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Estilos dos itens do catálogo */
+.jogo-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    width: 200px;
+}
+
+.jogo-item:hover {
+    transform: scale(1.05);
+}
+
+.jogo-item img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.nome-jogo {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.preco-produto p {
+    font-size: 18px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Estilos para centralizar a lista de filtros */
+span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.filtro-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: flex-start; /* Mantém os itens alinhados à esquerda */
+    margin-bottom: 20px; /* Espaçamento abaixo do filtro */
+}
+
+.listar-por {
+    color: #808080; /* Cinza para o "Listar por" */
+    font-size: 16px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 10px; /* Espaçamento entre o texto e o botão */
+}
+
+.dropdown-toggle {
+    width: 200px; /* Largura fixa para manter o tamanho */
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    color: #1a1a1a; /* Preto bem escuro para o texto do botão */
+    text-align: left;
+    font-size: 15px;
+}
+
+.dropdown-toggle:hover {
+    background-color: #e5e5e5;
+}
+
+.catalogo-jogos {
+    display: flex;
+    flex-direction: column; /* Para empilhar as linhas */
+    align-items: center; /* Centraliza as linhas horizontalmente */
+    margin: 20px; /* Espaçamento externo */
+}
+
+.linha-jogos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro da linha */
+    margin-bottom: 20px; /* Espaço entre as linhas */
+}
+
+.jogo-item {
+    flex: 0 0 20%; /* 20% da largura para cada item (5 itens por linha) */
+    margin: 5px; /* Margem entre os itens */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo de largura */
+    min-width: 180px; /* Define uma largura mínima para cada item */
+}
+
+.jogo-item img {
+    width: 100%; /* A imagem ocupa toda a largura do item */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .jogo-item {
+        flex: 0 0 33.33%; /* 3 itens por linha */
+    }
+}
+
+@media (max-width: 800px) {
+    .jogo-item {
+        flex: 0 0 50%; /* 2 itens por linha */
+    }
+}
+
+@media (max-width: 500px) {
+    .jogo-item {
+        flex: 0 0 100%; /* 1 item por linha */
+    }
+}
+
+.rodape {
+    background-color: #020612;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .rodape .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    margin: 0;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media li {
+    margin: 0 10px;
+  }
+  
+  .social-media img {
+    width: 24px;
+    height: 24px;
+  }
+  
+
+  
+.search-bar::placeholder {
+    color: rgba(0, 0, 0, 0.3); 
+}
+
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #0078d7;
+}
+
+/* Estilos para a paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilo para os números de página */
+.page-number, .arrow {
+    color: #0078d7;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.page-number:hover, .arrow:hover {
+    background-color: #0078d7;
+    color: #fff;
+}
+
+/* Estilo para a página ativa */
+.page-number.active {
+    background-color: #0078d7;
+    color: white;
+}
+
+/* Estilos para as setas de navegação */
+.arrow {
+    font-size: 16px;
+    padding: 6px;
+}
+
+/* Desabilitando a seta anterior se estiver na primeira página */
+.arrow.prev.disabled, .arrow.next.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
