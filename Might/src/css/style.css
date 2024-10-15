@@ -1,0 +1,365 @@
+body {
+  background-color: #151D27;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.jogos-homepage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.jogos-homepage a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.jogos-homepage div {
+  text-align: center; 
+}
+
+.jogos-homepage img {
+  width: 196px;
+  height: 91px;
+  object-fit: cover; 
+}
+
+.preco-produto p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.banner-game-destaque {
+  display: flex;
+  justify-content: center; 
+  margin: 20px 0; 
+}
+
+.banner-game-destaque img {
+  width: 1058px; 
+  height: auto; 
+}
+
+.cabecalho {
+  background-color: #4a4d50;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+}
+
+/* Ajuste para espaçamento e responsividade */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;  /* Espaço entre os ícones */
+}
+
+body {
+  padding-top: 80px;
+}
+
+/* Menu de navegação */
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Barra de pesquisa */
+.search-input {
+  width: 300px;  /* Reduzido para maior responsividade */
+  padding: 8px 40px 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  background: url('../imagens/lupa.png') no-repeat right 12px center;
+  background-size: 20px 20px;
+  outline: none;
+  transition: width 0.4s ease;  /* Transição suave */
+}
+
+.search-input:focus {
+  width: 400px;  /* Expande ao clicar */
+}
+
+/* Ajuste para centralizar logo e nome */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.header-logo span {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Ícones e carrinho */
+.carrinho-compra {
+  width: 25px;
+  height: auto;
+}
+
+.perfil-icon {
+  width: 25px;
+  height: auto;
+}
+
+/* Media Queries para melhorar a responsividade em telas menores */
+@media screen and (max-width: 768px) {
+  .search-input {
+      width: 150px;  /* Reduz a barra de pesquisa em telas menores */
+  }
+
+  .header-icons {
+      gap: 10px;  /* Reduz o espaço entre os ícones */
+  }
+}
+
+
+
+.header-lancamentos {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.header-lancamentos h2 {
+  font-size: 24px;
+  color: white;
+}
+
+.header-lancamentos h3 {
+  font-size: 18px;
+  color: lightgrey;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.header-lancamentos h3:hover {
+  color: white;
+}
+
+.img-jogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.img-maior {
+  margin-right: 2px;
+}
+
+.img-menores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.img-jogos img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: white;
+}
+
+.jogos-homepage {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.jogos-homepage a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.jogos-homepage img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.jogos-homepage p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.jogos-homepage div {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header-lancamentos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-lancamentos h2 {
+  margin: 0;
+  font-size: 25px;
+  color: white;
+  margin-left: 15px;
+}
+
+.header-lancamentos h3 {
+  margin: 0;
+  font-size: 17px;
+  color: #000;
+  margin-right: 308px;
+  border-radius: 15%;
+  background-color: darkcyan;
+  padding: 10px;
+}
+
+.preco-produto {
+  background-color: darkgray !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.preco-produto p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.banner-game-destaque {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.banner-game-destaque img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rodape {
+  background-color: #020612;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rodape .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-media li {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 10px 0;
+  margin-top: 20px;
+}
