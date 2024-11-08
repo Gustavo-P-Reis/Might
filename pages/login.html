@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Might</title>
+    <link rel="stylesheet" href="../src/css/login.css">
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/font.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-toggle">
+                <button id="login-tab" class="active-tab">Entrar</button>
+                <button id="signup-tab">Criar Conta</button>
+            </div>
+
+            <div id="login-form">
+                <h2>Entrar</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                   <a href="../index.html"><button type="submit" class="btn-login">Entrar</button></a>
+                </form>
+
+                <div class="forgot-password">
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+
+                <div class="separator">
+                    <span>Ou entre com</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn-social google">Google</button>
+                    <button class="btn-social discord">Discord</button>
+                </div>
+            </div>
+
+            <div id="signup-form" style="display: none;">
+                <h2>Criar Conta</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="new-email">E-mail</label>
+                        <input type="email" id="new-email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Senha</label>
+                        <input type="password" id="new-password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <!-- o minimo para  criar as contas -->
+                    <div class="password-tips">
+                        <p>Siga essas dicas:</p>
+                        <ul>
+                            <li>Mínimo 6 caracteres</li>
+                            <li>Tente uma combinação com letras maiúsculas e minúsculas, números e caracteres especiais</li>
+                            <li>Evite sequências como "12345" ou "abc"</li>
+                            <li>Evite informações pessoais e palavras comuns</li>
+                        </ul>
+                    </div>
+
+                    <!-- formas alternatiava de login -->
+                    
+                    <button type="submit" class="btn-login">Criar Conta</button>
+                </form>
+
+                <div class="separator">
+                    <span>Ou conecte-se via</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn-social google">Google</button>
+                    <button class="btn-social discord">Discord</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+             
+             <script src="../src/js/login.js"></script>
+
+</body>
+</html>
